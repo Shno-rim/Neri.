@@ -4418,7 +4418,7 @@ if (isBanned) return reply('Maaf kamu sudah terbenned!')
              ini_link = args[0]
  await fetchJson(`https://shot.screenshotapi.net/screenshot?&url=${ini_link}`)
 
-					buff = await getBuffer(anu.screenshot)
+					buff = await getBuffer(get_screenshot)
 					shino.sendMessage(from, buff, image, {quoted: shin, caption : teks})       
 break
 case 'nhentaipdf':
