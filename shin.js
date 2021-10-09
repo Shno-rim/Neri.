@@ -4403,7 +4403,7 @@ anu = await fetchJson(`https://leyscoders-api.herokuapp.com/api/facebook-dl?url=
              console.log(res)
 })
              break
-      case 'ssweb':
+      case 'ssweb1':
 					if (isBanned) return reply('Maaf kamu sudah terbenned!')
              if (args.length == 0) return reply(`Example: ${prefix + command} https://nekopoi.care/`)
              reply(mess.wait)
@@ -4411,7 +4411,17 @@ anu = await fetchJson(`https://leyscoders-api.herokuapp.com/api/facebook-dl?url=
              ini_buffer = await getBuffer(`https://hardianto-chan.herokuapp.com/api/tools/ssweb?url=${ini_link}&apikey=hardianto`)
              await shino.sendMessage(from, ini_buffer, image, { quoted: shin })
              break
-       case 'nhentaipdf':
+ case 'ssweb':
+if (isBanned) return reply('Maaf kamu sudah terbenned!')
+             if (args.length == 0) return reply(`Example: ${prefix + command} https://nekopoi.care/`)
+             reply(mess.wait)
+             ini_link = args[0]
+ await fetchJson(`https://shot.screenshotapi.net/screenshot?&url=${ini_link}`)
+
+					buff = await getBuffer(anu.screenshot)
+					shino.sendMessage(from, buff, image, {quoted: shin, caption : teks})       
+break
+case 'nhentaipdf':
 					if (isBanned) return reply('Maaf kamu sudah terbenned!')
             if (!isNsfw) return reply('nsfw belum aktif')
              if (args.length == 0) return reply(`Usage: ${prefix + command} query\nExample: ${prefix + command} 317986`)
@@ -4864,7 +4874,7 @@ Source : ${anu.result.source}
 *[Wait] Tunggu Sebentar..*`
 				///////buffer = await getBuffer(anu.result.thumbnail)
 				buffer1 = await getBuffer(anu.result.url_video)
-				shino.sendMessage(from, buffer1, video, {mimetype: 'video/mp4', filename: `${anu.result.video}.mp4`, quoted:shin, caption: 'Nih Gan'})
+				shino.sendMessage(from, buffer1, video, {mimetype: 'video/mp4', filename: `${anu.result.video}.mp4`, quoted:shin, caption: '${anu.result.title}'})
 					break  
 					
 					case 'ytdl':
@@ -5612,19 +5622,14 @@ break
 //------------------< Ingfo Bot >-------------------
       case 'runtime':
 					if (isBanned) return reply('Maaf kamu sudah terbenned!')
-              textImg(`${runtime(process.uptime())}`)
+              textImg(`{runtime(process.uptime())`)
               break
        case 'donate': 
        case 'donasi':
 					if (isBanned) return reply('Maaf kamu sudah terbenned!')
               textImg(setting.txtDonasi)
               break
-       case 'sourcecode': 
-       case 'sc': 
-       case 'src':
-					if (isBanned) return reply('Maaf kamu sudah terbenned!')
-              textImg(`Bot ini menggunakan sc : https://github.com/KiriGiriBot/`)
-              break
+       
       case 'ping':
       case 'speed':
 					if (isBanned) return reply('Maaf kamu sudah terbenned!')
