@@ -627,7 +627,7 @@ const isImage = (type === 'imageMessage')
         const uangsaku = Math.floor(Math.random() * (15 - 25 + 1) + 20)
         atm.addKoinUser(sender, uangsaku, _uang)
         const currentLevel = level.getLevelingLevel(sender, _level)
-        const amountXp = Math.floor(Math.random() * (151 - 243 + 19) + 289)
+        const amountXp = Math.floor(Math.random() * (0 - 0 + 0) + 0)
         const requiredXp = 1200 * Math.pow(currentLevel, 2) + 2912 * currentLevel + 1988
         level.addLevelingXp(sender, amountXp, _level)
         if (requiredXp <= level.getLevelingXp(sender, _level)) {
