@@ -4874,7 +4874,7 @@ Source : ${anu.result.source}
 *[Wait] Tunggu Sebentar..*`
 				///////buffer = await getBuffer(anu.result.thumbnail)
 				buffer1 = await getBuffer(anu.result.url_video)
-				shino.sendMessage(from, buffer1, video, {mimetype: 'video/mp4', filename: `${anu.result.video}.mp4`, quoted:shin, caption: '${anu.result.title}'})
+				shino.sendMessage(from, buffer1, video, {mimetype: 'video/mp4', filename: `${anu.result.video}.mp4`, quoted:shin, caption: `*${anu.result.title}*`})
 					break  
 					
 					case 'ytdl':
