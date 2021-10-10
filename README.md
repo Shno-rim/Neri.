@@ -15,7 +15,7 @@
 </p>
 <p align='center'>
    <a href="https://twitter.com/WiraShn?t=Su5sCAARYQhoeRBLcJkGhA&s=09"><img height="30" src="https://telegra.ph/file/61c739abe39df12574b75.jpg"></a>&nbsp;&nbsp;
-   <a href=""><img height="30" src=""></a>&nbsp;&nbsp;
+   <a href="https://wa.me/6285279655886"><img height="30" src="https://telegra.ph/file/ed43464e92cbcbe3c78db.jpg"></a>&nbsp;&nbsp;
    <a href="https://instagram.com/dryflow.r"><img height="30" src="https://telegra.ph/file/eb754eb0d61c8114ac7f3.jpg"></a>
 </P>
 
