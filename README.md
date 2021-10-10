@@ -14,9 +14,9 @@
 <a href="https://github.com/SerinaWangy/Shino/watchers"><img title="Watching" src="https://img.shields.io/github/watchers/SerinaWangy/Shino?label=Watchers&color=blue&style=flat-square"></a>
 </p>
 <p align='center'>
-   <a href="https://twitter.com/"><img height="30" src="https://github.com/TobyG74/TobyG74/blob/main/twitter.png?raw=true"></a>&nbsp;&nbsp;
-   <a href="https://instagram.com/dryflow.r"><img height="30" src="https://github.com/TobyG74/TobyG74/blob/main/instagram.jpg?raw=true"></a>&nbsp;&nbsp;
-   <a href="https://www.facebook.com/"><img height="30" src="https://github.com/TobyG74/TobyG74/blob/main/facebook.png?raw=true"></a>
+   <a href="https://twitter.com/WiraShn?t=Su5sCAARYQhoeRBLcJkGhA&s=09"><img height="30" src=""></a>&nbsp;&nbsp;
+   <a href="https://instagram.com/dryflow.r"><img height="30" src=""></a>&nbsp;&nbsp;
+   <a href="https://www.facebook.com/"><img height="30" src=""></a>
 </P>
 
 
