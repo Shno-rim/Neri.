@@ -5,6 +5,17 @@
 
 
 # Apikey
-> lolhuman,
-> xteam
+>- lolhuman,
+>- xteam,
+>- leyscoders,
+>- vhtear,
+>- zeks
+
+# Run bot
+
+- git clone https://github.com/SerinaWangy/Shino
+- npm start
+
+
+
 
