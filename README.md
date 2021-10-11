@@ -9,8 +9,8 @@
 </p>
 <p align="center">
 <a href="https://github.com/SerinaWangy/followers"><img title="Followers" src="https://img.shields.io/github/followers/SerinaWangy?color=blue&style=flat-square"></a>
-<a href="https://github.com/SerinaWangy/Shino/stargazers/"><img title="Stars" src="https://img.shields.io/github/stars/SerinaWangy/Shino?color=blue&style=flat-square"></a>
 <a href="https://github.com/SerinaWangy/Shino/network/members"><img title="Forks" src="https://img.shields.io/github/forks/SerinaWangy/Shino?color=blue&style=flat-square"></a>
+<a href="https://github.com/SerinaWangy/Shino/stargazers/"><img title="Stars" src="https://img.shields.io/github/stars/SerinaWangy/Shino?color=blue&style=flat-square"></a>
 <a href="https://github.com/SerinaWangy/Shino/watchers"><img title="Watching" src="https://img.shields.io/github/watchers/SerinaWangy/Shino?label=Watchers&color=blue&style=flat-square"></a>
 </p>
 <p align='center'>
