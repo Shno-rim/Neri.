@@ -30,7 +30,14 @@
 # Run bot
 
 - git clone https://github.com/SerinaWangy/Shino
+- cd Shino-master
 - npm start
+
+### IMAGEMAGICK
+- [DOWNLOAD](https://imagemagick.org/script/download.php)
+
+### FFMPEG
+- [DOWNLOD](https://ffmpeg.org/)
 
 
 
