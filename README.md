@@ -28,10 +28,13 @@
 >- zeks
 
 # Run bot
-
+```bash
 - git clone https://github.com/SerinaWangy/Shino
 - cd Shino-master
 - npm start
+```
+
+
 
 ### IMAGEMAGICK
 - [DOWNLOAD](https://imagemagick.org/script/download.php)
@@ -42,3 +45,64 @@
 
 
 
+---
+## 60+ Fitur
+
+
+| Group | Feature |
+| :-------------: | :-----------------------------: |
+| ✅| Kick @62+++++ |
+| ✅| Add @62+++++ |
+| ✅| Anti Link|
+| ✅| Promote |
+| ✅| Demote @62+++++ |
+| ✅| delete @62+++++ |
+| ✅| Level |
+| ✅| Mute |
+
+| Admin Bot | Feature |
+| :-------------: | :-----------------------------: |
+| ✅| Ban @62+++++ |
+| ✅| Unban @62+++++ |
+| ✅| Block|
+| ✅| Unblock |
+
+| ANIME | Feature |
+| :-------------: | :-----------------------------: |
+| ✅| Pencarian Waifu |
+| ✅| Pencarian Anime | 
+| ✅| Pencarian Nhentai|
+| ✅| Pencarian Kusonime|
+| ✅| Pencarian Otakudesu|
+| ✅| Otakudesu Ongoing|
+| ✅| Random Loli|
+| ✅| Random Milf |
+| ✅| Random Gawrgura |
+| ✅| Random Neko |
+| ✅| Random Nakano Miku |
+| ✅| Random Nakano Yotsuba |
+| ✅| Random Megumin |
+| ✅| Random Cosplay |
+
+| Sticker Maker | Feature |
+| :-------------: | :-----------------------------: |
+| ✅| Stiker Dengan Gambar |
+| ✅| Stiker Dengan Gif |
+| ✅| Stiker Dengan Url Gambar | |
+| ✅| Stiker Dengan Gif Url |
+| ✅| Stiker Dengan Gif Api |
+| ✅| Stiker Dengan Petir Gif |
+| ✅| Gambar Untuk Stiker. |
+| ✅| Teks Ke Gambar |
+| ✅| Teks Ke Gif |
+
+| DOWNLOAD | Feature |
+| :-------------: | :-----------------------------: |
+| ✅| Pengunduh Video/Audio YouTube |
+| ✅| Pengunduh Doujin | |
+| ✅| Pengunduh Video/Gambar Instagram|
+| ✅| Pengunduh Video Facebook |
+| ✅| Pengunduh Tiktok |
+| ✅| Pengunduh Twitter |
+| ✅| Pengunduh Joox |
+| ✅| Mainkan Musik |
