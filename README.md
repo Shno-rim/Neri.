@@ -106,3 +106,10 @@
 | ✅| Pengunduh Twitter |
 | ✅| Pengunduh Joox |
 | ✅| Mainkan Musik |
+
+
+
+# Note
+>- Gw enc, Kapan Kapan Gw Kasih Yang Biasa
+>- Jangan Perjual Belikan Script Ini
+>- Tutorial Run Bot Ada Di Atas
