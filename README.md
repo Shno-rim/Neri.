@@ -114,3 +114,4 @@
 >- Jangan Perjual Belikan Script Ini
 >- Tutorial Run Bot Ada Di Atas
 >- Jangan Lupa Update baileys
+>- Serina.js Hapus Dulu Sebelum Run Bot
