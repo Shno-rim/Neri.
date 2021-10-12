@@ -88,18 +88,15 @@
 | :-------------: | :-----------------------------: |
 | ✅| Stiker Dengan Gambar |
 | ✅| Stiker Dengan Gif |
-| ✅| Stiker Dengan Url Gambar | |
-| ✅| Stiker Dengan Gif Url |
-| ✅| Stiker Dengan Gif Api |
+| ✅| Stiker Dengan WM |
 | ✅| Stiker Dengan Petir Gif |
-| ✅| Gambar Untuk Stiker. |
-| ✅| Teks Ke Gambar |
-| ✅| Teks Ke Gif |
+| ✅| Random Stiker Gawrgura |
+| ✅| Sticker Ke Gambar |
 
 | DOWNLOAD | Feature |
 | :-------------: | :-----------------------------: |
 | ✅| Pengunduh Video/Audio YouTube |
-| ✅| Pengunduh Doujin | |
+| ✅| Pengunduh Doujin | 
 | ✅| Pengunduh Video/Gambar Instagram|
 | ✅| Pengunduh Video Facebook |
 | ✅| Pengunduh Tiktok |
