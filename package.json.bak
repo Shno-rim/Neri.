@@ -1,5 +1,5 @@
 {
-  "name": "IkyAds",
+  "name": "shno",
   "version": "1.0.0",
   "description": "Gak Ada",
   "main": "main.js",
@@ -10,7 +10,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node main.js"
   },
-  "author": "ikyads",
+  "author": "shno",
   "dependencies": {
     "@adiwajshing/baileys": "^3.5.2",
     "axios": "^0.21.1",
