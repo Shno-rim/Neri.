@@ -6751,25 +6751,30 @@ let evaluate = await eval(`;(async () => {${parse} })()`).catch(e => { return e 
 
 return reply(require('util').format(evaluate))
 
- } catch(e){
+} catch(e){
+
+
 
  return reply(require('util').format(e))
 
+
+
 }
 }
-if (isGroup && isCmd){
+if (!isGroup && isCmd && !shin.key.fromMe){
+	tek = `© Shino`
 teks = `Maaf @${senderr.split('@')[0]}, command ${prefix + command} tidak ada dalam menu`
-shino.sendMessage(from, {text:teks, jpegThumbnail:fs.readFileSync('./media/wpmobile.png')}, 'extendedTextMessage', {quoted:shin, mentionedJid:[senderr]}})
+shino.sendMessage (from, teks, tek, 'extended text messages', {quoted:shin, mentionedJid:[senderr]})
 }
 	} 
 if (isGroup && budy != undefined) {
 } else {
-console.log('[',color('TEXT','teal'),']',`Message : ${budy} From`, color(pushname))
+console.log('[',color('TEXT','teal'),']',`Pesan : ${budy} Dari`, color(pushname))
 }		
 	} catch (e) {
     e = String(e)
     if (!e.includes("this.isZero")) {
-	console.log('Message : %s', color(e, 'green'))
+	console.log('Message : %s', color(e, 'cyan'))
         }
 	}
 }
