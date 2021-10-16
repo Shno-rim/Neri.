@@ -2944,8 +2944,6 @@ case "mode":
                           shino.relayWAMessage(prep)
                break
    case 'character':
- (args.length == 0) return reply(`Nama Anime Nya Mana\n Contoh: !character shin`)
-
 query = args.join(" ")
 get_result = await fetchJson(`https://api.lolhuman.xyz/api/character?apikey=${zerokey}&query=${query}`)
 get_result = get_result.result
