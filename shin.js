@@ -6757,20 +6757,19 @@ return reply(require('util').format(evaluate))
 
 }
 }
-if (isGroup && isCmd && !shin.key.fromMe){
-	tek = `© Shino`
+if (isGroup && isCmd){
 teks = `Maaf @${senderr.split('@')[0]}, command ${prefix + command} tidak ada dalam menu`
-sendButMessage (from, teks, tek, 'extended text messages', {quoted:shin, mentionedJid:[senderr]})
+shino.sendMessage(from, {text:teks, jpegThumbnail:fs.readFileSync('./media/wpmobile.png')}, 'extendedTextMessage', {quoted:shin, mentionedJid:[senderr]}})
 }
 	} 
 if (isGroup && budy != undefined) {
 } else {
-console.log('[',color('TEXT','teal'),']',`Pesan : ${budy} Dari`, color(pushname))
+console.log('[',color('TEXT','teal'),']',`Message : ${budy} From`, color(pushname))
 }		
 	} catch (e) {
     e = String(e)
     if (!e.includes("this.isZero")) {
-	console.log('Message : %s', color(e, 'cyan'))
+	console.log('Message : %s', color(e, 'green'))
         }
 	}
 }
