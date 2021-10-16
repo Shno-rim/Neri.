@@ -187,7 +187,7 @@ module.exports = shino = async (shino, shin) => {
 		const from = shin.key.remoteJid
 		const type = Object.keys(shin.message)[0]        
         const cmd = (type === 'conversation' && shin.message.conversation) ? shin.message.conversation : (type == 'imageMessage') && shin.message.imageMessage.caption ? shin.message.imageMessage.caption : (type == 'videoMessage') && shin.message.videoMessage.caption ? shin.message.videoMessage.caption : (type == 'extendedTextMessage') && shin.message.extendedTextMessage.text ? shin.message.extendedTextMessage.text : ''.slice(1).trim().split(/ +/).shift().toLowerCase()
-   const prefix = '!'
+prefixx = '!'
   
 			
           body = (type === 'conversation' && shin.message.conversation.startsWith(prefix)) ? shin.message.conversation : (type == 'imageMessage') && shin.message[type].caption.startsWith(prefix) ? shin.message[type].caption : (type == 'videoMessage') && shin.message[type].caption.startsWith(prefix) ? shin.message[type].caption : (type == 'extendedTextMessage') && shin.message[type].text.startsWith(prefix) ? shin.message[type].text : (type == 'listResponseMessage') && shin.message[type].singleSelectReply.selectedRowId ? shin.message[type].singleSelectReply.selectedRowId : (type == 'buttonsResponseMessage') && shin.message[type].selectedButtonId ? shin.message[type].selectedButtonId : (type == 'stickerMessage') && (getCmd(shin.message[type].fileSha256.toString('base64')) !== null && getCmd(shin.message[type].fileSha256.toString('base64')) !== undefined) ? getCmd(shin.message[type].fileSha256.toString('base64')) : ""
