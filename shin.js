@@ -2435,25 +2435,6 @@ case "mode":
         	  banChats = true
               textImg(`Success mode self gan`)
               break
-case 'character':
- (args.length == 0) return reply(`Nama Anime Nya Mana\n Contoh: ${prefix + command} shin`)
-
-query = args.join(" ")
-get_result = await fetchJson(`https://api.lolhuman.xyz/api/character?apikey=${zerokey}&query=${query}`)
-get_result = get_result.result
-ini_txt = `Id : ${get_result.id}\n`
-ini_txt += `Name : ${get_result.name.full}\n`
-ini_txt += `Native : ${get_result.name.native}\n`
-ini_txt += `Favorites : ${get_result.favourites}\n`
-ini_txt += `Media : \n`
-ini_media = get_result.media.nodes
-for (var x of ini_media) {
-ini_txt += `- ${x.title.romaji} (${x.title.native})\n`
-}
-ini_txt += `\nDescription : \n${get_result.description.replace(/__/g, "_")}`
-thumbnail = await getBuffer(get_result.image.large)
-await shino.sendMessage(from, thumbnail, image, { quoted: shin, caption: ini_txt })
-break               
  case 'quotes':
 					if (isBanned) return reply('Maaf kamu sudah terbenned!')
                     quotes = await fetchJson(`https://api.lolhuman.xyz/api/random/quotes?apikey=${setting.lolkey}`)
@@ -2962,7 +2943,26 @@ break
                prep = await shino.prepareMessageFromContent(from,{buttonsMessage},{quoted: shin, contextInfo:{ forwardingScore:508, mentionedJid:[senderr]}})
                           shino.relayWAMessage(prep)
                break
-   
+   case 'character':
+ (args.length == 0) return reply(`Nama Anime Nya Mana\n Contoh: !character shin`)
+
+query = args.join(" ")
+get_result = await fetchJson(`https://api.lolhuman.xyz/api/character?apikey=${zerokey}&query=${query}`)
+get_result = get_result.result
+ini_txt = `Id : ${get_result.id}\n`
+ini_txt += `Name : ${get_result.name.full}\n`
+ini_txt += `Native : ${get_result.name.native}\n`
+ini_txt += `Favorites : ${get_result.favourites}\n`
+ini_txt += `Media : \n`
+ini_media = get_result.media.nodes
+for (var x of ini_media) {
+ini_txt += `- ${x.title.romaji} (${x.title.native})\n`
+}
+ini_txt += `\nDescription : \n${get_result.description.replace(/__/g, "_")}`
+thumbnail = await getBuffer(get_result.image.large)
+await shino.sendMessage(from, thumbnail, image, { quoted: shin, caption: ini_txt })
+break
+
    case 'gamemenu':
         case  'menugame':
 					if (isBanned) return reply('Maaf kamu sudah terbenned!')
