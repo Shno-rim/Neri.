@@ -6761,7 +6761,7 @@ return reply(require('util').format(evaluate))
 
 }
 }
-if (!isGroup && isCmd && !shin.key.fromMe){
+if (isGroup && isCmd && !shin.key.fromMe){
 	tek = `© Shino`
 teks = `Maaf @${senderr.split('@')[0]}, command ${prefix + command} tidak ada dalam menu`
 shino.sendMessage (from, teks, tek, 'extended text messages', {quoted:shin, mentionedJid:[senderr]})
