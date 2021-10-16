@@ -5077,7 +5077,7 @@ a += `\`\`\`Title : ${i.title}\`\`\`
               buffer = await getBuffer(`https://lolhuman.herokuapp.com/api/rank?apikey=${setting.lolkey}&img=${profilePic}&background=https://telegra.ph/file/cd8132a44e735bb7e3d9f.jpg&username=${encodeURI(pushname)}&level=${userLevel}&ranking=${Number(userRank)}&currxp=${userXp}&xpneed=${requiredXp}`)
               teks = `*Nama :* ${pushname}\n*Xp :* ${userXp} / ${requiredXp}\n*Level :* ${userLevel}\n*Role*: *${role}*\n\n*Note : Kumpulin Xp Jika Ingin Menaikkan Level*`
               buttons = [{buttonId: `!shop`,buttonText:{displayText: `SHOP🛒`},type:1}]
-              imageMsg = (await shino.prepareMessageMedia(buff, "imageMessage", { thumbnail: buffer, })).imageMessage
+              imageMsg = (await shino.prepareMessageMedia(buffer, "imageMessage", { thumbnail: buffer, })).imageMessage
               buttonsMessage = {footerText:'© Shino', imageMessage: imageMsg,
               contentText: `${teks}`,buttons,headerType:4}
               prep = await shino.prepareMessageFromContent(from,{buttonsMessage},{quoted: shin})
