@@ -55,7 +55,7 @@ apt install imagemagick -y
 
 
 ---
-## 60+ Fitur
+## 170+ Fitur
 
 
 | Group | Feature |
