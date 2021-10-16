@@ -1244,7 +1244,7 @@ ${ucapanWaktu} Kak ${pushname}
           },]);
               break
 case 'nhentaisearch':
-case 'nhentais'
+case 'nhentais':
 case 'ns':
 if (args.length == 0) return reply(`Nama Anime Nya Mana\n Contoh: ${prefix + command} Naruto`)
 
