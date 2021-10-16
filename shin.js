@@ -1242,11 +1242,11 @@ ${ucapanWaktu} Kak ${pushname}
             },
             type: 1,
           },]);
-              break
+              brea
 case 'nhentaisearch':
 case 'nhentais':
 case 'ns':
-if (args.length == 0) return reply(`Nama Anime Nya Mana\n Contoh: ${prefix + command} Naruto`)
+if (args.length == 0) return reply(`Nama Anime Nya Mana\n Contoh: ${prefix + command} Shin`)
 
 query = args.join(" ")
 get_result = await fetchJson(`https://api.lolhuman.xyz/api/nhentaisearch?apikey=${setting.lolkey}&query=${query}`)
@@ -2435,7 +2435,26 @@ case "mode":
         	  banChats = true
               textImg(`Success mode self gan`)
               break
-                case 'quotes':
+case 'character':
+ (args.length == 0) return reply(`Nama Anime Nya Mana\n Contoh: ${prefix + command} shin`)
+
+query = args.join(" ")
+get_result = await fetchJson(`https://api.lolhuman.xyz/api/character?apikey=${zerokey}&query=${query}`)
+get_result = get_result.result
+ini_txt = `Id : ${get_result.id}\n`
+ini_txt += `Name : ${get_result.name.full}\n`
+ini_txt += `Native : ${get_result.name.native}\n`
+ini_txt += `Favorites : ${get_result.favourites}\n`
+ini_txt += `Media : \n`
+ini_media = get_result.media.nodes
+for (var x of ini_media) {
+ini_txt += `- ${x.title.romaji} (${x.title.native})\n`
+}
+ini_txt += `\nDescription : \n${get_result.description.replace(/__/g, "_")}`
+thumbnail = await getBuffer(get_result.image.large)
+await shino.sendMessage(from, thumbnail, image, { quoted: shin, caption: ini_txt })
+break               
+ case 'quotes':
 					if (isBanned) return reply('Maaf kamu sudah terbenned!')
                     quotes = await fetchJson(`https://api.lolhuman.xyz/api/random/quotes?apikey=${setting.lolkey}`)
                     quotes = quotes.result
