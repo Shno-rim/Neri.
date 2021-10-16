@@ -120,3 +120,4 @@ apt install imagemagick -y
 >- Tutorial Run Bot Ada Di Atas
 >- Jangan Lupa Update baileys
 >- Serina.js Hapus Dulu Sebelum Run Bot
+>- TQ TO PENYEDIA APIKEY
