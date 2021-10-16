@@ -199,7 +199,6 @@ module.exports = shino = async (shino, shin) => {
 		const arg = body.substring(body.indexOf(' ') + 1)
 		const ar = args.map((v) => v.toLowerCase())
 		const argz = body.trim().split(/ +/).slice(1)
-		const isCmd = body.startsWith(prefix) 
 		if (isCmd) cmdadd()
 		const totalhit = JSON.parse(fs.readFileSync('./database/totalcmd.json'))[0].totalcmd
         const q = args.join(' ')
