@@ -1243,6 +1243,27 @@ ${ucapanWaktu} Kak ${pushname}
             type: 1,
           },]);
               break
+case 'nhentaisearch':
+case 'nhentais'
+case 'ns':
+if (args.length == 0) return reply(`Nama Anime Nya Mana\n Contoh: ${prefix + command} Naruto`)
+
+query = args.join(" ")
+get_result = await fetchJson(`https://api.lolhuman.xyz/api/nhentaisearch?apikey=${setting.lolkey}&query=${query}`)
+get_result = get_result.result
+ini_txt = "Result : \n"
+for (var x of get_result) {
+ini_txt += `Id : ${x.id}\n`
+ini_txt += `Title English : ${x.title_english}\n`
+ini_txt += `Title Japanese : ${x.title_japanese}\n`
+ini_txt += `Native : ${x.title_native}\n`
+ini_txt += `Upload : ${x.date_upload}\n`
+ini_txt += `Page : ${x.page}\n`
+ini_txt += `Favourite : ${x.favourite}\n\n`
+}
+reply(ini_txt)
+break
+
 case 'nsfw':
 					if (isBanned) return reply('Maaf kamu sudah terbenned!')
 				if (!isGroupAdmins) return reply(mess.only.admin)
