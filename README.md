@@ -5,13 +5,13 @@
 <a href="#"><img title="SHINO BOT" src="https://img.shields.io/badge/SHINO BOT-green?colorA=%23ff0000&colorB=%23017e40&style=for-the-badge"></a>
 </p>
 <p align="center">
-<a href="https://github.com/SerinaWangy"><img title="Author" src="https://img.shields.io/badge/Author-Wira-orange.svg?style=for-the-badge&logo=github"></a>
+<a href="https://github.com/Shno-rim"><img title="Author" src="https://img.shields.io/badge/Author-Wira-orange.svg?style=for-the-badge&logo=github"></a>
 </p>
 <p align="center">
-<a href="https://github.com/Shno-rim/followers"><img title="Followers" src="https://img.shields.io/github/followers/SerinaWangy?color=blue&style=flat-square"></a>
-<a href="https://github.com/Shno-rim/Shino/network/members"><img title="Forks" src="https://img.shields.io/github/forks/SerinaWangy/Shino?color=blue&style=flat-square"></a>
-<a href="https://github.com/Shno-rim/Shino/stargazers/"><img title="Stars" src="https://img.shields.io/github/stars/SerinaWangy/Shino?color=blue&style=flat-square"></a>
-<a href="https://github.com/Shno-rim/Shino/watchers"><img title="Watching" src="https://img.shields.io/github/watchers/SerinaWangy/Shino?label=Watchers&color=blue&style=flat-square"></a>
+<a href="https://github.com/Shno-rim/followers"><img title="Followers" src="https://img.shields.io/github/followers/Shno-rim?color=blue&style=flat-square"></a>
+<a href="https://github.com/Shno-rim/Shino/network/members"><img title="Forks" src="https://img.shields.io/github/forks/Shno-rim/Shino?color=blue&style=flat-square"></a>
+<a href="https://github.com/Shno-rim/Shino/stargazers/"><img title="Stars" src="https://img.shields.io/github/stars/Shno-rim/Shino?color=blue&style=flat-square"></a>
+<a href="https://github.com/Shno-rim/Shino/watchers"><img title="Watching" src="https://img.shields.io/github/watchers/Shno-rim/Shino?label=Watchers&color=blue&style=flat-square"></a>
 </p>
 <p align='center'>
    <a href="https://twitter.com/WiraShn?t=Su5sCAARYQhoeRBLcJkGhA&s=09"><img height="30" src="https://telegra.ph/file/61c739abe39df12574b75.jpg"></a>&nbsp;&nbsp;
@@ -38,7 +38,7 @@ apt install imagemagick -y
 
 # Run bot
 ```bash
-- git clone https://github.com/SerinaWangy/Shino
+- git clone https://github.com/Shno-rim/Shino
 - cd Shino-master
 - npm start
 ```
