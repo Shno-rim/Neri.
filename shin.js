@@ -4215,7 +4215,7 @@ _Silahkan tunggu file media sedang dikirim mungkin butuh beberapa menit_`
             teks = args.join(' ')
             reply(mess.wait)
             res = await y2mateV(teks).catch(e => {
-            reply('_[ ! ] Error Gagal Memasuki Web Y2mate_')
+            reply('_[ ! ] TerJadi Error Silahkan Coba Lagi  Nanti_')
 })
             result = `
 *Data Berhasil Didapatkan!*
