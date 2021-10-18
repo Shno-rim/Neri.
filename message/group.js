@@ -8,7 +8,7 @@ const { color, bgcolor } = require('../lib/color')
 join = 'Selamat Datang'
 leave = 'Selamat Tinggal'
 
-teks = `${join}`
+teks = `Selamat Datang`
 let setting = JSON.parse(fs.readFileSync('./setting.json'))
 
 module.exports = welcome = async (shino, anu) => {
@@ -116,7 +116,7 @@ module.exports = welcome = async (shino, anu) => {
 
         buttonsMessage = {
 
-          contentText: `${out}`,
+          contentText: `Selamat Tinggal`,
 
           footerText: "© Shino",
 
