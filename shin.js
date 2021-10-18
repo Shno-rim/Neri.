@@ -5030,12 +5030,15 @@ teks += `\`\`\` Title : ${get_result[i].title}\`\`\`
               a = `
 *Data Berhasil Didapatkan!*\n`
 for (let i of res.all) {
-a += `\`\`\`Title : ${i.title}\`\`\`
-\`\`\`Views : ${i.views}\`\`\`
-\`\`\`Upload : ${i.ago}\`\`\`
-\`\`\`Durasi : ${i.timestamp}\`\`\`
-\`\`\`Channel : ${i.author.name}\`\`\`
-\`\`\`Link : ${i.url}\`\`\``
+a += `
+═════════════════
+
+*Title* : ${i.title}
+*Views* : ${i.views}
+*Upload* : ${i.ago}
+*Durasi* : ${i.timestamp}
+*Channel* : ${i.author.name}
+*Link* : ${i.url}`
 }
                b = a.trim()
                sendFileFromUrl(res.all[0].image, image, {quoted: shin, caption: b})
