@@ -113,7 +113,7 @@ apt install imagemagick -y
 | ✅| Pengunduh Joox |
 | ✅| Mainkan Musik |
 
-
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/Shno-rim/)
 
 ### Note
 >- Jangan Perjual Belikan Script Ini
