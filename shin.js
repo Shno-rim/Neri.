@@ -4454,13 +4454,9 @@ anu = await fetchJson(`https://leyscoders-api.herokuapp.com/api/facebook-dl?url=
              break
  case 'ssweb':
 if (isBanned) return reply('Maaf kamu sudah terbenned!')
-             if (args.length == 0) return reply(`Example: ${prefix + command} https://nekopoi.care/`)
-             reply(mess.wait)
-             ini_link = args[0]
- await fetchJson(`https://shot.screenshotapi.net/screenshot?&url=${ini_link}`)
-
-					buff = await getBuffer(get_screenshot)
-					shino.sendMessage(from, buff, image, {quoted: shin, caption : teks})       
+              ini_link = args[0]
+             ini_buffer = await getBuffer(`https://api.lolhuman.xyz/api/ssweb?apikey=${setting.lolkey}&url=${ini_link}`)
+             await shino.sendMessage(from, ini_buffer, image, { quoted: shin })
 break
 case 'nhentaipdf':
 					if (isBanned) return reply('Maaf kamu sudah terbenned!')
