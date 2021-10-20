@@ -34,7 +34,7 @@ const starts = async (shin = new WAConnection()) => {
 	// Menghubungkan
 	fs.existsSync(`./${setting.sessionName}.json`) && shin.loadAuthInfo(`./${setting.sessionName}.json`)
 	shin.on('connecting', () => {
-		console.log(color('[ Shino ]', 'red'), color('Menyambungkan ));
+		console.log(color('[ Shino ]', 'red'), color('Menyambungkan'));
 	})
 const spinner = { 
   "interval": 120,
