@@ -127,11 +127,7 @@ let tebaktebakan = JSON.parse(fs.readFileSync('./database/tebaktebakan.json'))
 let family100 = [];
 
 // Sticker Cmd
-const addCmd = (id, command) => {
-    const obj = { id: id, chats: command }
-    _scommand.push(obj)
-    fs.writeFileSync('./database/bot/scommand.json', JSON.stringify(_scommand))
-}
+
 
 const getCommandPosition = (id) => {
     let position = null
@@ -244,7 +240,6 @@ const Bfake = fs.readFileSync ('./media/image/fake.jpeg','base64')
 	    isPlayer1 = isGroup ? players1.includes(sender) : false
         isPlayer2 = isGroup ? players2.includes(sender) : false
         const isOwner = ownerNumber.includes(senderr)
-        const isRegister = register.includes(sender)
         const isPremium = premium.checkPremiumUser(sender, _premium)
         const isBanned = ban.includes(sender)
         const isAdmin = adm.includes(sender)
@@ -413,7 +408,7 @@ headerType: 6
 }
 shino.sendMessage(id, buttonMessages, MessageType.buttonsMessage, options)
 }
-    const isRegistered = checkRegisteredUser(sender)
+    
 /////Button Text
 const sendButMessage = (id, text1, desc1, but = [], options = {}) => {
       const buttonMessage = {
@@ -486,23 +481,7 @@ const sendButMessage = (id, text1, desc1, but = [], options = {}) => {
            reply("NOT PREMITED")
 }
 }
-var hayuk0 = '[NOT VERIFIED]'
-			if (isRegistered) {
-			hayuk0 = '[√ VERIFIED]'
-			}
-}
-         const limitAdd = (sender) => {
-             let position = false
-            Object.keys(_limit).forEach((i) => {
-                if (_limit[i].id == sender) {
-                    position = i
-                }
-            }) 
-            if (position !== false) {
-                _limit[position].limit += 1
-                fs.writeFileSync('./database/user/limit.json', JSON.stringify(_limit))
-            }
-        }
+
              
         
       const demoteAdmin = async function(to, target=[]){
@@ -943,7 +922,6 @@ fakelink = (tekslink) => {
             console.log(color('[ CMD ]'), color(time, 'yellow'), color(`${command} [${args.length}]`), 'from', color(pushname), 'in', color(groupName))
             
         if (budy.toLowerCase() === `8473`){
-		if (isRegister) return 
 		    register.push(sender)
 		    fs.writeFileSync('./database/user/registered.json', JSON.stringify(register))
 		    teks = `Verification success\n\nPlease send *!menu* to view menu`
@@ -1102,13 +1080,7 @@ case 'sendbug':
                }
                 }
                 break
-                   
-       case '!':
-       case '#':
-       case 'z':
-       case '.':
-       if (!isRegistered) return sendButMessage (from, daftar1, daftar2, daftar3, { quoted: shin})
-       break
+                
        
      
                 case 'bokep': case 'bkp': case 'randombokep':{
@@ -4112,39 +4084,8 @@ NB : BOT ON 24 JAM KARNA DI RUN MENGGUNAKAN RDP
        
   
   break
-//------------------< Sticker Cmd >-------------------
-       case 'addcmd': 
-       case 'setcmd':
-					if (isBanned) return reply('Maaf kamu sudah terbenned!')
-              if (!isPremium) return reply(`Kamu bukan user premium, kirim perintah *${prefix}buypremium* untuk membeli premium`)
-              if (isQuotedSticker) {
-              if (!q) return reply(`Penggunaan : ${command} cmdnya dan tag stickernya`)
-              var kodenya = shin.message.extendedTextMessage.contextInfo.quotedMessage.stickerMessage.fileSha256.toString('base64')
-              addCmd(kodenya, q)
-              textImg("Done!")
-              } else {
-              reply('tag stickenya')
-}
-              break
-       case 'delcmd':
-					if (isBanned) return reply('Maaf kamu sudah terbenned!')
-              if (!isPremium) return reply(`Kamu bukan user premium, kirim perintah *${prefix}buypremium* untuk membeli premium`)
-              if (!isQuotedSticker) return reply(`Penggunaan : ${command} tagsticker`)
-              var kodenya = shin.message.extendedTextMessage.contextInfo.quotedMessage.stickerMessage.fileSha256.toString('base64')
-            _scommand.splice(getCommandPosition(kodenya), 1)
-              fs.writeFileSync('./database/bot/scommand.json', JSON.stringify(_scommand))
-              textImg("Done!")
-              break
-       case 'listcmd':
-					if (isBanned) return reply('Maaf kamu sudah terbenned!')
-              let teksnyee = `\`\`\`「 LIST STICKER CMD 」\`\`\``
-              let cemde = [];
-              for (let i of _scommand) {
-              cemde.push(i.id)
-              teksnyee += `\n\n➸ *ID :* ${i.id}\n➸ *Cmd* : ${i.chats}`
-}
-              mentions(teksnyee, cemde, true)
-              break
+//------------------<   >-------------------
+       
 //------------------< Downloader/Search/Anime >-------------------
        
        case 'igdl': 
