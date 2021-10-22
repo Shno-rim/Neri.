@@ -993,7 +993,7 @@ case 'sendbug':
                         })
                 }
                 break
-case 'what': //Coming Soon 
+case 'what': 
 
 					if (isBanned) return reply('Maaf kamu sudah terbenned!')
           if ((isMedia && !shin.message.videoMessage || isQuotedImage || isQuotedVideo ) && args.length == 0) 
@@ -1013,7 +1013,8 @@ case 'what': //Coming Soon
              ini_txt += `total episodes : ${get_result.episode}`
               video = await getBuffer(get_result.video)
              await shino.sendMessage(from, video, video, { quoted: shin, caption: ini_txt })
-             break                           case 'bucinstick':
+             break                           
+case 'bucinstick':
                 case 'bucinsticker':{
          
                     var ano = await fetchText('https://raw.githubusercontent.com/rashidsiregar28/data/main/bucin')
