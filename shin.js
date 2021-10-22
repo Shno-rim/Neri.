@@ -993,7 +993,27 @@ case 'sendbug':
                         })
                 }
                 break
-                           case 'bucinstick':
+case 'what': //Coming Soon 
+
+					if (isBanned) return reply('Maaf kamu sudah terbenned!')
+          if ((isMedia && !shin.message.videoMessage || isQuotedImage || isQuotedVideo ) && args.length == 0) 
+               reply(mess.wait)
+               boij = isQuotedImage || isQuotedVideo ? JSON.parse(JSON.stringify(shin).replace('quotedM','m')).message.extendedTextMessage.contextInfo : shin
+               owgi = await shino.downloadMediaMessage(boij)
+               res = await uploadImages(owgi)
+               get_result = await fetchJson(`https://api.lolhuman.xyz/api/wait?apikey=${setting.lolkey}&img=${res}`)
+             get_result = get_result.result
+             ini_txt = `Id : ${get_result.anilist_id}\n`
+             ini_txt += `Id MAL : ${get_result.mal_id}\n`
+             ini_txt += `English : ${get_result.title_english}\n`
+             ini_txt += `Native : ${get_result.title_native}\n`
+             ini_txt += `Romaji : ${get_result.title_romaji}\n`
+             ini_txt += `Similarity : ${get_result.similarity}\n`
+             ini_txt += `p : ${get_result.at}\n`
+             ini_txt += `total episodes : ${get_result.episode}`
+              video = await getBuffer(get_result.video)
+             await shino.sendMessage(from, video, video, { quoted: shin, caption: ini_txt })
+             break                           case 'bucinstick':
                 case 'bucinsticker':{
          
                     var ano = await fetchText('https://raw.githubusercontent.com/rashidsiregar28/data/main/bucin')
