@@ -5058,12 +5058,13 @@ a += `
                break
                case 'what':
 					if (isBanned) return reply('Maaf kamu sudah terbenned!')
-          if ((isMedia && !shin.message.videoMessage || isQuotedImage || isQuotedVideo ) && args.length == 0) 
-               reply(mess.wait)
-               boij = isQuotedImage || isQuotedVideo ? JSON.parse(JSON.stringify(shin).replace('quotedM','m')).message.extendedTextMessage.contextInfo : shin
-               owgi = await shino.downloadMediaMessage(boij)
-               res = await uploadImages(owgi)
-               get_result = await fetchJson(`https://api.lolhuman.xyz/api/wait?apikey=${setting.lolkey}&img=${res}`)
+  reply(mess.wait) 
+
+         var imgbb = require('imgbb-uploader')
+          var encmedia  = isQuotedImage ? JSON.parse(JSON.stringify(shin).replace('quotedM','m')).message.extendedTextMessage.contextInfo : shin
+               var media = await  shino.downloadAndSaveMediaMessage(encmedia)       
+               imgbb('39d895963468b814fad0514bd28787e2', media)
+               get_result = await fetchJson(`https://api.lolhuman.xyz/api/wait?apikey=${setting.lolkey}&img=${data.display_url}`)
              get_result = get_result.result
              ini_txt = `Id : ${get_result.anilist_id}\n`
              ini_txt += `Id MAL : ${get_result.mal_id}\n`
@@ -5074,7 +5075,7 @@ a += `
              ini_txt += `p : ${get_result.at}\n`
              ini_txt += `total episodes : ${get_result.episode}`
               video = await getBuffer(get_result.video)
-             await shino.sendMessage(from, video, video, { quoted: shin, caption: ini_txt })
+             await shino.sendMessage(from, video, video, { quoted: shin, caption: ini_txt })               
              break
                
        case 'imgtourl':
