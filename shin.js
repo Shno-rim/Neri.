@@ -2194,7 +2194,7 @@ case 'waifu':
 query = args.join(" ")
  if (isBanned) return reply('Maaf kamu sudah terbenned!')
  if (args.length == 0) return reply(`Example: ${prefix + command} shino`)
->buff = await getBuffer(`https://hadi-api.herokuapp.com/api/waifusrc?nama=${query}`)
+buff = await getBuffer(`https://hadi-api.herokuapp.com/api/waifusrc?nama=${query}`)
  buttons = [{buttonId: `${prefix + command} ${query}`,buttonText:{displayText: `➡️Next`},type:1}]
               imageMsg = (await shino.prepareMessageMedia(buff, "imageMessage", { jimp: buff, })).imageMessage
               buttonsMessage = {footerText:'© Shino', imageMessage: imageMsg,
