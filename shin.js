@@ -126,12 +126,7 @@ let tebaklagu = JSON.parse(fs.readFileSync('./database/tebaklagu.json'))
 let tebaktebakan = JSON.parse(fs.readFileSync('./database/tebaktebakan.json'))
 let family100 = [];
 
-// Sticker Cmd
-const addCmd = (id, command) => {
-    const obj = { id: id, chats: command }
-    _scommand.push(obj)
-    fs.writeFileSync('./database/bot/scommand.json', JSON.stringify(_scommand))
-}
+
 
 const getCommandPosition = (id) => {
     let position = null
@@ -4115,39 +4110,7 @@ NB : BOT ON 24 JAM KARNA DI RUN MENGGUNAKAN RDP
        
   
   break
-//------------------< Sticker Cmd >-------------------
-       case 'addcmd': 
-       case 'setcmd':
-					if (isBanned) return reply('Maaf kamu sudah terbenned!')
-              if (!isPremium) return reply(`Kamu bukan user premium, kirim perintah *${prefix}buypremium* untuk membeli premium`)
-              if (isQuotedSticker) {
-              if (!q) return reply(`Penggunaan : ${command} cmdnya dan tag stickernya`)
-              var kodenya = shin.message.extendedTextMessage.contextInfo.quotedMessage.stickerMessage.fileSha256.toString('base64')
-              addCmd(kodenya, q)
-              textImg("Done!")
-              } else {
-              reply('tag stickenya')
-}
-              break
-       case 'delcmd':
-					if (isBanned) return reply('Maaf kamu sudah terbenned!')
-              if (!isPremium) return reply(`Kamu bukan user premium, kirim perintah *${prefix}buypremium* untuk membeli premium`)
-              if (!isQuotedSticker) return reply(`Penggunaan : ${command} tagsticker`)
-              var kodenya = shin.message.extendedTextMessage.contextInfo.quotedMessage.stickerMessage.fileSha256.toString('base64')
-            _scommand.splice(getCommandPosition(kodenya), 1)
-              fs.writeFileSync('./database/bot/scommand.json', JSON.stringify(_scommand))
-              textImg("Done!")
-              break
-       case 'listcmd':
-					if (isBanned) return reply('Maaf kamu sudah terbenned!')
-              let teksnyee = `\`\`\`「 LIST STICKER CMD 」\`\`\``
-              let cemde = [];
-              for (let i of _scommand) {
-              cemde.push(i.id)
-              teksnyee += `\n\n➸ *ID :* ${i.id}\n➸ *Cmd* : ${i.chats}`
-}
-              mentions(teksnyee, cemde, true)
-              break
+            
 //------------------< Downloader/Search/Anime >-------------------
        
        case 'igdl': 
@@ -6833,11 +6796,16 @@ return reply(require('util').format(evaluate))
 
 
 }
-}
-if (isGroup && isCmd && !shin.key.fromMe){
-	tek = `© Shino`
+
+
+		if (budy.includes(`Cekprefix`)) {
+
+                  reply(`Prefix : !`)
+             }
+                  }
+if (isCmd){
 teks = `Maaf @${senderr.split('@')[0]}, command ${prefix + command} tidak ada dalam menu`
-shino.sendMessage (from, teks, tek, 'extended text messages', {quoted:shin, mentionedJid:[senderr]})
+shino.sendMessage(from, {text:teks, jpegThumbnail:fs.readFileSync('./image/odc.jpeg')}, 'extendedTextMessage', {sendEphemeral:false, quoted:shin, contextInfo:{ forwardingScore:508, isForwarded:false, mentionedJid:[senderr]}})
 }
 	} 
 if (isGroup && budy != undefined) {
