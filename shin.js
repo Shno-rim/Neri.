@@ -2195,7 +2195,7 @@ case 'waifu':
 query = args.join(" ")
  if (isBanned) return reply('Maaf kamu sudah terbenned!')
  if (args.length == 0) return reply(`Example: ${prefix + command} shino`)
-                    
+                    try{
  buff = await getBuffer(`https://hadi-api.herokuapp.com/api/waifusrc?nama=${query}`)
  buttons = [{buttonId: `${prefix + command} ${query}`,buttonText:{displayText: `➡️Next`},type:1}]
               imageMsg = (await shino.prepareMessageMedia(buff, "imageMessage", { jimp: buff, })).imageMessage
@@ -2203,7 +2203,9 @@ query = args.join(" ")
               contentText:`*${query}*`,buttons,headerType:4}
               prep = await shino.prepareMessageFromContent(from,{buttonsMessage},{quoted: shin})
               shino.relayWAMessage(prep)
-
+} catch (e) {
+             reply(`${query} tidak di temukan`)
+}
 break
 case 'meme':
 case 'memek':
@@ -5136,7 +5138,7 @@ a += `
               } catch {
               profilePic = errorImg
 }
-              buffer = await getBuffer(`https://lolhuman.herokuapp.com/api/rank?apikey=ZeroYT7&img=${profilePic}&background=https://telegra.ph/file/cd8132a44e735bb7e3d9f.jpg&username=${encodeURI(pushname)}&level=${userLevel}&ranking=${Number(userRank)}&currxp=${userXp}&xpneed=${requiredXp}`)
+              buffer = await getBuffer(`https://api.lolhuman.xyz/api/rank?apikey=ZeroYT7&img=${profilePic}&background=https://telegra.ph/file/cd8132a44e735bb7e3d9f.jpg&username=${encodeURI(pushname)}&level=${userLevel}&ranking=${Number(userRank)}&currxp=${userXp}&xpneed=${requiredXp}`)
               teks = `*Nama :* ${pushname}\n*Xp :* ${userXp} / ${requiredXp}\n*Level :* ${userLevel}\n*Role*: *${role}*\n\n*Note : Kumpulin Xp Jika Ingin Menaikkan Level*`
               buttons = [{buttonId: `!shop`,buttonText:{displayText: `SHOP🛒`},type:1}]
               imageMsg = (await shino.prepareMessageMedia(buffer, "imageMessage", { thumbnail: buffer, })).imageMessage
