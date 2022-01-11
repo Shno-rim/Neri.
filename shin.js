@@ -1238,8 +1238,9 @@ case 'help':
               
                 
 
-                    shino.sendMessage(from, { contentText: `${menubeta}`, footerText: '© Shino', buttons: [{ buttonId: `!allmenu`, buttonText: { displayText: 'ALL MENU' }, type: 1 } ], headerType: 'LOCATION', locationMessage: { degreesLatitude: '', degreesLongitude: '', jpegThumbnail: neor, contextInfo: {mentionedJid: [sender]}}}, 'buttonsMessage')
-                    break
+                    shino.sendMessage(from, "imageMessage", { thumbnail: buff, caption: `${menubeta}` })                   
+		      break
+		
 case 'nhentaisearch':
 case 'nhentais':
 case 'ns':
